@@ -8,11 +8,11 @@ Uses commander.js and cheerio. Teaches command line application development and 
 var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
+var rest = require('restler');
+var util = require('util');
 var HTMLFILE_DEFAULT = 'index.html';
 var CHECKSFILE_DEFAULT = 'checks.json';
-
-var htmlfile = 'index.html';
-var checkfile = 'checks.json';
+var URL_DEFAULT = 'http://powerful-inlet-1692.herokuapp.com/';
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
@@ -48,14 +48,36 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
+var getHtmlFile = function (indexurl) {
+    rest.get(indexurl).on('complete', function (result) {
+	if (result instanceof Error)
+	    console.error('Error: ' + result.message);
+	else
+	    fs.writeFileSync('url_html.html', result);
+    });
+};
+
 if(require.main == module) {
     program
 	.option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
 	.option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+	.option('-u, --index-url <index_url>', 'Url of the app')
 	.parse(process.argv);
-    var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+
+    if (program.indexUrl) {
+	rest.get(program.indexUrl).on('complete', function (urlhtml) {
+	    fs.writeFile('url_indexhtml.html', urlhtml, function (err) {
+		if (err) throw err;
+		var checkJson = checkHtmlFile('url_indexhtml.html', program.checks);
+		var outJson = JSON.stringify(checkJson, null, 4);
+		console.log(outJson);
+	    });
+	});
+    } else {
+	var checkJson = checkHtmlFile(program.file, program.checks);
+	var outJson = JSON.stringify(checkJson, null, 4);
+	console.log(outJson);
+    }
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
