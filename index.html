@@ -12,6 +12,8 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Aladin&text=Stackel" rel="stylesheet" type="text/css"> <!--  To use with brand-->
+    <link href="http://fonts.googleapis.com/css?family=Caudex&text=HomeAboutContact" rel="stylesheet" type="text/css"> <!--  To use with bookmark-->
     <style type="text/css">
 
       /* Large desktop */
@@ -67,7 +69,7 @@
       .order {
         padding: 2% 0%;
       }
-      .actions {
+      .actions { /* background for statistics */
         background-color: #343434;
         padding: 3% 0%;
       }
@@ -97,6 +99,13 @@
       .footer a {
         color: #ccccff;
       }
+      .brand {
+      font-family: 'Aladin', 'Ubuntu', serif;
+      }
+      .bookmark {
+      font-family: 'Caudex', 'Ubuntu', serif;
+      }
+      
     </style>
   </head>
   <body>
@@ -112,12 +121,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">Stackel</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active bookmark"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+              <li class="bookmark"><a href="#about"><i class="icon-info-sign"></i> About</a></li>
+              <li class="bookmark"><a href="#contact"><i class="icon-globe"></i> Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -133,14 +142,14 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1>Stackel</h1>
         </div>
       </div> 
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">It's gonna be really cool!</p>
+          <p class="lead">Share your routes with others!</p>
         </div>
       </div>
       <div class="row-fluid pitch">
@@ -150,14 +159,14 @@
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
-          <div class="span8 offset2">
+          <div class="span10 offset1">
             <div class="statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
                 <div class="linediv-l">
-                <h3>0</h3> <p>backers</p>
+                <h3>0</h3> <p>backers</p> 
                 </div>
               </div>
               <div class="span4">
@@ -204,7 +213,7 @@
         </div>
         <div class="span5 copy">
           <p>
-	    This is just a skeleton future website.
+	    This is morkup of future selfstarter.
           </p>
         </div>
       </div>
@@ -236,7 +245,7 @@
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-		    Well, it's just making your own startup from zero experience.
+		    Stackel allows you to map your route and share it with friends!
                   </div>
                 </div>
               </div>
@@ -244,12 +253,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-		    How much time are you going to spend on this?
+		    How much does it cost?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-		    As much as possible. This is 3-months project.
+		    It's free! When it will be released you can download it on your device.
                   </div>
                 </div>
               </div>
