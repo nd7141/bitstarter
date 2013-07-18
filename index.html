@@ -12,8 +12,8 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Aladin&text=Stackel" rel="stylesheet" type="text/css"> <!--  To use with brand-->
-    <link href="http://fonts.googleapis.com/css?family=Caudex&text=HomeAboutContact" rel="stylesheet" type="text/css"> <!--  To use with bookmark-->
+    <link href="http://fonts.googleapis.com/css?family=Aladin&text=Stackel" rel="stylesheet" type="text/css"> <!--  To use with brand, heading-->
+    <link href="http://fonts.googleapis.com/css?family=Caudex" rel="stylesheet" type="text/css"> <!--  To use with bookmark, subheading-->
     <style type="text/css">
 
       /* Large desktop */
@@ -72,6 +72,7 @@
       .actions { /* background for statistics */
         background-color: #343434;
         padding: 3% 0%;
+        border-radius: 0% 4% 4% 0%;
       }
       .video, .thermometer, .order, .social, .statistics {
         text-align: center;
@@ -99,11 +100,16 @@
       .footer a {
         color: #ccccff;
       }
-      .brand {
+      .brand, .heading h1 {
       font-family: 'Aladin', 'Ubuntu', serif;
       }
-      .bookmark {
+      .bookmark, .subheading p {
       font-family: 'Caudex', 'Ubuntu', serif;
+      }
+      .img-polaroid {
+      border-radius: 4%;
+      -webkit-border-radius: 4%;
+      -moz-border-radius: 4%;
       }
       
     </style>
@@ -184,7 +190,7 @@
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
+            <div class="thermometer progress progress-striped ">	      
               <div class="bar bar-success" style="width: 1%;"></div>
               <div class="bar bar-warning" style="width: 99%;"></div>
             </div>
