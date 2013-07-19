@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Stackel</title>
+    <title>Stakkel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -12,12 +12,13 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Aladin&text=Stackel" rel="stylesheet" type="text/css"> <!--  To use with brand, heading-->
-    <link href="http://fonts.googleapis.com/css?family=Caudex|Acme" rel="stylesheet" type="text/css"> <!--  To use with bookmark-->
+    <link href="http://fonts.googleapis.com/css?family=Aladin&text=Stakkel" rel="stylesheet" type="text/css"> <!--  To use with brand, heading-->
+    <link href="http://fonts.googleapis.com/css?family=Caudex|Acme" rel="stylesheet" type="text/css"> <!--  To use with bookmark, faq-->
+    <link href="http://fonts.googleapis.com/css?family=Noto+Serif|Alegraya" rel="stylesheet" type="text/css"> <!--  To use with marketing copy-->
     <style type="text/css">
 
       /* Large desktop */
-      @media (min-width: 980px) { 
+      @media (min-width: 795px) { 
         body {
          padding-top: 60px;
         }
@@ -27,8 +28,18 @@
        .linediv-r {
          border-left: 1px white solid;
        }
+      .actions {
+      border-radius: 0% 4% 4% 0%;
+      }
       }
 
+      /* Tablets and smaller */
+      @media (max-width: 794px) {
+      .actions {
+      border-radius: 4% 4% 4% 4%;
+      }
+      }
+      
       /* Landscape phones and down */
       @media (max-width: 480px) { 
        .copy {
@@ -70,9 +81,8 @@
         padding: 2% 0%;
       }
       .actions { /* background for statistics */
-        background-color: #343434;
+        background-color: #0E0E0F;
         padding: 3% 0%;
-        border-radius: 0% 4% 4% 0%;
       }
       .video, .thermometer, .order, .social, .statistics {
         text-align: center;
@@ -87,23 +97,32 @@
         padding-bottom: 2.5%;
         text-align: justify;
       }
+      .copy h3 {
+      font-family: 'Noto Serif', arial;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+      }
+      .copy p {
+      font-family: 'Alegraya', arial;
+      }
       .asset {
         padding: 2.5% 0%;
       }
       .footer {
-        color: #cccccc;
+        color: #0E0E0F;
         text-align: center;
       }
       .footer p {
         font-size: 11px;
       }
       .footer a {
-        color: #ccccff;
+        color: #1D8DF0;
       }
       .brand, .heading h1 {
       font-family: 'Aladin', 'Ubuntu', serif;
       }
-      .bookmark, .subheading p {
+      .bookmark, .subheading p, .faq h3 {
       font-family: 'Acme', 'Open Sans', 'Caudex', 'Ubuntu', serif;
       }
       .img-polaroid {
@@ -111,7 +130,7 @@
       -webkit-border-radius: 4%;
       -moz-border-radius: 4%;
       }
-      
+            
     </style>
   </head>
   <body>
@@ -127,7 +146,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Stackel</a>
+          <a class="brand" href="#">Stakkel</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active bookmark"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
@@ -148,14 +167,14 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Stackel</h1>
+          <h1>Stakkel</h1>
         </div>
       </div> 
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">Share your routes with others!</p>
+          <p class="lead">Meet with friends in one click</p>
         </div>
       </div>
       <div class="row-fluid pitch">
@@ -218,16 +237,18 @@
           <img class="img-polaroid" src="http://placehold.it/480x300">
         </div>
         <div class="span5 copy">
-          <p>
-	    This is mockup of future selfstarter.
+	  <h3 class="row-fluid span8 offset2">Tell your friends where you meet</h3>
+          <p class="row-fluid span12">
+	    Just drop your destination on a map and send it to your friends. Stakkel will automatically build the best route for you and your friends.
           </p>
         </div>
       </div>
 
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
-          <p>
-	    There is no functionality whatsoever.
+	  <h3 class="row-fluid span8 offset2">See where your friends are</h3>
+	  <p class="row-fluid span12">
+	    Got earlier to the destination or your friends are late, with Stakkel there is no need to call them to know where they are. You can see their location right now and at what time they will arrive.
           </p>
         </div>
         <div class="span5 asset">
@@ -251,7 +272,7 @@
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-		    Stackel allows you to map your route and share it with friends!
+		    Stakkel allows you to map your route and share it with friends!
                   </div>
                 </div>
               </div>
